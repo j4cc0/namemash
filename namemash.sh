@@ -47,7 +47,7 @@ transform_name() {
 	if [ "$#" -lt 3 ]; then
 		die "Missing parameter"
 	fi
-	for transform in "cat" "tr [a-z] [A-Z]" "tr [A-Z] [a-z]"
+	for transform in "cat" "tr '[a-z]' '[A-Z]'" "tr '[A-Z]' '[a-z]'"
 	do
 		#echo "--> transform $transform"
 		produce_names "$1" "$2" "$3" | eval $transform
