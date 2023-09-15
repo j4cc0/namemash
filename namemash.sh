@@ -35,12 +35,14 @@ produce_names() {
 	echo "$l$s$f"	# DoeSmith.John
 	echo "$lu$s$f"	# Doe_Smith.John
 	echo "$l$s$f1"	# DoeSmith.J
+	echo "$lu$s$f1"	# Doe_Smith.J
 	echo "$l1$s$f"	# D.John
 	echo "$l2$s$f"	# Do.John
 	echo "$l2$s$f1"	# Do.J
 	echo "$l2$s$f2"	# Do.Jo
 	echo "$f"	# John
-	echo "$l"	# Doe_Smith
+	echo "$l"	# DoeSmith
+	echo "$lu"	# Doe_Smith
 	return 0
 }
 
