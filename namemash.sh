@@ -26,7 +26,8 @@ produce_names() {
 	f2="$(echo $f | sed 's/^\(..\).*$/\1/')"
 	echo "$f$s$l"	# John.DoeSmith
 	echo "$f$s$lu"	# John.Doe_Smith
-	echo "$f1$s$l"	# J.Doe_Smith
+	echo "$f1$s$l"	# J.DoeSmith
+	echo "$f1$s$lu"	# J.Doe_Smith
 	echo "$f$s$l1"	# John.D
 	echo "$f$s$l2"	# John.Do
 	echo "$f1$s$l2"	# J.Do
