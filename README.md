@@ -13,10 +13,7 @@ ___EOF___
 ./namemash.sh names.lst
 
 echo "John Doe" | ./namemash.sh - | grep -v '[A-Z]' | wc -l
-      38
 echo "John Doe" | ./namemash.sh - |  wc -l
-     114
 echo "John Doe Smith" | ./namemash.sh - |  wc -l
-     132
 ```
 
