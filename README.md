@@ -14,6 +14,7 @@ ___EOF___
 
 echo "John Doe" | ./namemash.sh - | grep -v '[A-Z]' | wc -l
 echo "John Doe" | ./namemash.sh - |  wc -l
-echo "John Doe Smith" | ./namemash.sh - |  wc -l
+echo "John Doe Smith" | ./namemash.sh -
+echo "John Doe Smith" | ./namemash.sh - | sed 's/$/@example.com/'
 ```
 
