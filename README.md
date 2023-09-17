@@ -12,9 +12,9 @@ john doe
 ___EOF___
 ./namemash.sh names.lst
 
+echo "James Tiberius Kirk" | ./namemash.sh -
 echo "John Doe" | ./namemash.sh - | grep -v '[A-Z]' | wc -l
 echo "John Doe" | ./namemash.sh - |  wc -l
-echo "John Doe Smith" | ./namemash.sh -
 echo "John Doe Smith" | ./namemash.sh - | sed 's/$/@example.com/'
 ```
 
