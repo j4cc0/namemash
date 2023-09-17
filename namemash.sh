@@ -31,6 +31,8 @@ produce_names() {
 	lg="$lf$s$le"					# first chars of last names and final part in full
 	le1=$(echo $le | sed 's/^\(.\).*$/\1/')		# first chars of final part
 	le2=$(echo $le | sed 's/^\(..\).*$/\1/')	# first chars of final part
+	lh="$lf$s$le1"
+	li="$lf$s$le2"
 	# -
 	echo "$f$s$l"	# John.DoeSmith
 	echo "$f$s$lu"	# John.Doe_Smith
@@ -41,6 +43,8 @@ produce_names() {
 	echo "$f$s$lg"	# John.D.Smith
 	echo "$f$s$le1"	# John.S
 	echo "$f$s$le2"	# John.Sm
+	echo "$f$s$lh"	# John.D.S
+	echo "$f$s$li"	# John.D.Sm
 	# -
 	echo "$f1$s$l"	# J.DoeSmith
 	echo "$f1$s$lu"	# J.Doe_Smith
@@ -51,6 +55,8 @@ produce_names() {
 	echo "$f1$s$lg"	# J.D.Smith
 	echo "$f1$s$le1"	# J.S
 	echo "$f1$s$le2"	# J.Sm
+	echo "$f1$s$lh"	# J.D.S
+	echo "$f1$s$li"	# J.D.Sm
 	# -
 	echo "$f2$s$l"	# Jo.DoeSmith
 	echo "$f2$s$lu"	# Jo.Doe_Smith
@@ -61,6 +67,8 @@ produce_names() {
 	echo "$f2$s$lg"	# Jo.D.Smith
 	echo "$f2$s$le1"	# Jo.S
 	echo "$f2$s$le2"	# Jo.Sm
+	echo "$f2$s$lh"	# Jo.D.S
+	echo "$f2$s$li"	# Jo.D.Sm
 	# -
 	echo "$l$s$f"	# DoeSmith.John
 	echo "$lu$s$f"	# Doe_Smith.John
@@ -71,6 +79,8 @@ produce_names() {
 	echo "$lg$s$f"	# D.Smith.John
 	echo "$le1$s$f"	# S.John
 	echo "$le2$s$f"	# Sm.John
+	echo "$lh$s$f"	# D.S.John
+	echo "$li$s$f"	# D.Sm.John
 	# -
 	echo "$l$s$f1"	# DoeSmith.J
 	echo "$lu$s$f1"	# Doe_Smith.J
@@ -81,6 +91,8 @@ produce_names() {
 	echo "$lg$s$f1"	# D.Smith.J
 	echo "$le1$s$f1"	# S.J
 	echo "$le2$s$f1"	# Sm.J
+	echo "$lh$s$f1"	# D.S.J
+	echo "$li$s$f1" # D.Sm.J
 	# -
 	echo "$l$s$f2"	# DoeSmith.Jo
 	echo "$lu$s$f2"	# Doe_Smith.Jo
@@ -91,6 +103,8 @@ produce_names() {
 	echo "$lg$s$f2"	# D.Smith.Jo
 	echo "$le1$s$f2"	# S.Jo
 	echo "$le2$s$f2"	# Sm.Jo
+	echo "$lh$s$f2"	# D.S.Jo
+	echo "$li$s$f2"	# D.Sm.Jo
 	# -
 	echo "$f"	# John
 	echo "$l"	# Doe_Smith
